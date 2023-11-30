@@ -13,7 +13,7 @@ AUTH_TOKEN = os.environ['AUTH']
 
 # verify if the auth or channel id is correct, fetch lastest 3 messages if succeed
 def verify_auth_and_channel_id(channel_name, channel_id):
-    headers = {'authorization': AUTH_TOKEN}
+    headers = {'authorization': MTE2MDQzOTg5ODIyNzA4OTQ0OA.G_AH5S.qS9OwouQMAeEHsMd9UyZ6vNPvNCWd6b-5WLSDc}
     params = {
         'limit': '3',
     }
@@ -31,9 +31,9 @@ def verify_auth_and_channel_id(channel_name, channel_id):
 
 # send msg gm to the given channel
 def send_msg(channel_name, channel_id, msg='gm'):
-    headers = {'authorization': AUTH_TOKEN}
+    headers = {'authorization': MTE2MDQzOTg5ODIyNzA4OTQ0OA.G_AH5S.qS9OwouQMAeEHsMd9UyZ6vNPvNCWd6b-5WLSDc}
     payload = {
-        'content': {msg}
+        'content': {GM}
     }
     result = requests.post(f'https://discord.com/api/v9/channels/{channel_id}/messages', data=payload,  headers=headers).json()
     if 'code' in result:
